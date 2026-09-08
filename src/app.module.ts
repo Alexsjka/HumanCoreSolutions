@@ -2,6 +2,8 @@ import { Module } from '@nestjs/common';
 import { createObserveModule } from '@nestjs/observe';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { BenefitsModule } from './benefits/benefits.module';
+import { ContractsModule } from './contracts/contracts.module';
 import { DepartmentsModule } from './departments/departments.module';
 import { EmployeesModule } from './employees/employees.module';
 import { PositionsModule } from './positions/positions.module';
@@ -10,6 +12,8 @@ export const { ObserveModule, ObserveInstrument } = createObserveModule();
 
 @Module({
   imports: [
+    BenefitsModule,
+    ContractsModule,
     DepartmentsModule,
     EmployeesModule,
     PositionsModule,
