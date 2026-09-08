@@ -3,6 +3,7 @@ import { createObserveModule } from '@nestjs/observe';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { DepartmentsModule } from './departments/departments.module';
+import { EmployeesModule } from './employees/employees.module';
 import { PositionsModule } from './positions/positions.module';
 
 export const { ObserveModule, ObserveInstrument } = createObserveModule();
@@ -10,6 +11,7 @@ export const { ObserveModule, ObserveInstrument } = createObserveModule();
 @Module({
   imports: [
     DepartmentsModule,
+    EmployeesModule,
     PositionsModule,
     // Distributed tracing, auto-correlated logs, request/job metrics, error
     // telemetry, alarms, and more — out of the box. Sign up at https://observe.nestjs.com
