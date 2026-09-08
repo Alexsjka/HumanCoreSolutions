@@ -27,6 +27,11 @@ export class EmployeesController {
     return this.employeesService.findAll();
   }
 
+  @Get(':id/details')
+  findOneDetails(@Param('id', ParseIntPipe) id: number) {
+    return this.employeesService.findOneDetails(id);
+  }
+
   @Get(':id')
   findOne(@Param('id', ParseIntPipe) id: number) {
     return this.employeesService.findOne(id);
